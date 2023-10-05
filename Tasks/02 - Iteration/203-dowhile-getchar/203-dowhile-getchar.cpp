@@ -7,15 +7,15 @@ int main()
 
     char userEnteredCharacter;
     char returnKey;
-
+    bool exitCondition;
     do
     {
         userEnteredCharacter = getchar();   //ASCII character
         returnKey = getchar();              //Return key
         printf("You typed %c\n", userEnteredCharacter);
         printf("You also pressed return (ASCII %d)\n", returnKey);
-
-    } while ((userEnteredCharacter != 'q')&&(userEnteredCharacter != 'Q'));            //Repeat if condition is met - note the != operator
+        exitCondition = ((userEnteredCharacter == 'q') || (userEnteredCharacter == 'Q'));
+    } while (!exitCondition);           
 
     puts("Finished");
 }
