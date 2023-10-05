@@ -7,7 +7,7 @@ int main()
 
 
     //For loop (pre-C99 standard)
-    for (i = 0; i < 5; i++)
+    for (i = -10; i <= 20 ; i = i + 5)
     {
         //Perform code tasks
         printf("i=%d\n", i);
